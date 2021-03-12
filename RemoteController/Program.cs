@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing;
 using System.Text;
-using System.Runtime.InteropServices;
 
 namespace RemoteController
 {
@@ -16,7 +14,7 @@ namespace RemoteController
 
             while (input.CanRead && (length = input.Read(buffer, 0, buffer.Length)) > 0)
             {
-                
+
                 var payload = new byte[length];
 
                 Buffer.BlockCopy(buffer, 0, payload, 0, length);
@@ -31,35 +29,35 @@ namespace RemoteController
             }
         }
 
-        [DllImport("User32.Dll")]
-        public static extern long SetCursorPos(int x, int y);
-
-        [DllImport("user32.dll")]
-        public static extern bool GetCursorPos(ref Point lpPoint);
-
         static void Draw(string data)
         {
-            Point p = new Point();
-            GetCursorPos(ref p);
+
+            const int SENSITIVITY = 25;
+
+            MouseOperations.MousePoint p = MouseOperations.GetCursorPosition();
 
 
             switch (data)
             {
                 case "add1x":
-                SetCursorPos(p.X + 100, p.Y);
-                break;
+                    MouseOperations.SetCursorPosition(p.X + SENSITIVITY, p.Y);
+                    break;
                 case "add1y":
-                SetCursorPos(p.X, p.Y + 1);
-                break;
+                    MouseOperations.SetCursorPosition(p.X, p.Y + SENSITIVITY);
+                    break;
                 case "sub1x":
-                SetCursorPos(p.X - 1, p.Y);                
-                break;
+                    MouseOperations.SetCursorPosition(p.X - SENSITIVITY, p.Y);
+                    break;
                 case "sub1y":
-                SetCursorPos(p.X, p.Y - 1);
-                break;
+                    MouseOperations.SetCursorPosition(p.X, p.Y - SENSITIVITY);
+                    break;
                 default:
-                Console.WriteLine("Something failed");
-                break;
+                    Console.WriteLine("Something failed");
+                    break;
+                case "click":
+                    MouseOperations.MouseEvent(MouseOperations.MouseEventFlags.LeftDown);
+                    MouseOperations.MouseEvent(MouseOperations.MouseEventFlags.LeftUp);
+                    break;
             }
         }
     }
