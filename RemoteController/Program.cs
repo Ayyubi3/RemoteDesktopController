@@ -32,7 +32,7 @@ namespace RemoteController
         static void Draw(string data)
         {
 
-            const int SENSITIVITY = 25;
+            const int SENSITIVITY = 5;
 
             MouseOperations.MousePoint p = MouseOperations.GetCursorPosition();
 
