@@ -1,0 +1,16 @@
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.exe
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.deps.json
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.runtimeconfig.json
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.runtimeconfig.dev.json
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.dll
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\ref\RemoteController.dll
+C:\Users\Eyüp\Desktop\Remote\RemoteController\bin\Release\net5.0\RemoteController.pdb
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.csprojAssemblyReference.cache
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.AssemblyInfoInputs.cache
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.AssemblyInfo.cs
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.csproj.CoreCompileInputs.cache
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.dll
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\ref\RemoteController.dll
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.pdb
+C:\Users\Eyüp\Desktop\Remote\RemoteController\obj\Release\net5.0\RemoteController.genruntimeconfig.cache
