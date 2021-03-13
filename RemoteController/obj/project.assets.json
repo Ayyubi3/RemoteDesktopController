@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eyüp\\Desktop\\Remote\\RemoteController\\RemoteController.csproj",
+      "projectUniqueName": "C:\\Users\\Eyüp\\source\\repos\\Remote\\RemoteController\\RemoteController.csproj",
       "projectName": "RemoteController",
-      "projectPath": "C:\\Users\\Eyüp\\Desktop\\Remote\\RemoteController\\RemoteController.csproj",
+      "projectPath": "C:\\Users\\Eyüp\\source\\repos\\Remote\\RemoteController\\RemoteController.csproj",
       "packagesPath": "C:\\Users\\Eyüp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eyüp\\Desktop\\Remote\\RemoteController\\obj\\",
+      "outputPath": "C:\\Users\\Eyüp\\source\\repos\\Remote\\RemoteController\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eyüp\\AppData\\Roaming\\NuGet\\NuGet.Config",

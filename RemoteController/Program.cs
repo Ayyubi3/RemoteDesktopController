@@ -28,6 +28,8 @@ namespace RemoteController
                 Console.Out.Flush();
             }
         }
+ 
+        static int ClickCounter = 0;
 
         static void Draw(string data)
         {

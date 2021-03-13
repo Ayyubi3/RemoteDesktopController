@@ -1,77 +1,34 @@
 <!DOCTYPE html>
 <html onmouseup="end()" ontouchend="end()" onpointerup="end()" style="user-select: none;">
-
 <head>
     <style>
-        html {}
-
-        .grid {
-            display: inline-flex;
-            /* 1 */
-            flex-flow: row wrap;
+        #ola {
+            background-color: aqua;
+            padding: 10px;
         }
-
-        .up,
-        .down {
-            flex: 0 0 100%;
-            /* 2 */
-            text-align: center;
-            /* 2 */
-        }
-
-        .left,
-        .right {
-            flex: 1 0 1%;
-            /* 3 */
-            display: flex;
-        }
-
-        .left {
-            justify-content: flex-end;
-        }
-
-        .right {
-            justify-content: flex-start;
-        }
-
-        .ok {}
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-
 <body>
-    <div class="grid">
-        <form class="up">
-            <input type="hidden" />
-            <button ontouchstart="start('sub1y')" onmousedown="start('sub1y');" type class="button-large">Up
-            </button>
-        </form>
-        <form class="left">
-            <input type="hidden" />
-            <button ontouchstart="start('sub1x')" onmousedown="start('sub1x');" type class="button-large">Left</button>
-        </form>
-        <form class="ok">
-            <input type="hidden" />
-            <button ontouchstart="start('click')" onmousedown="start('click');" type class="button-large">OK</button>
-        </form>
-        <form class="right">
-            <input type="hidden" />
-            <button ontouchstart="start('add1x')" onmousedown="start('add1x');" type class="button-large">Right</button>
-        </form>
-        <form class="down">
-            <input type="hidden" />
-            <button ontouchstart="start('add1y')" onmousedown="start('add1y');" type class="button-large">Down</button>
-        </form>
-    </div>
+    <button id="ola" ontouchstart="start('sub1y')" onmousedown="start('sub1y');">Up</button>
+    <button id="ola" ontouchstart="start('sub1x')" onmousedown="start('sub1x');">Left</button>
+    <button id="ola" ontouchstart="apicall('click')" onmousedown="apicall('click');">OK</button>
+    <button id="ola" ontouchstart="start('add1x')" onmousedown="start('add1x');">Right</button>
+    <button id="ola" ontouchstart="start('add1y')" onmousedown="start('add1y');">Down</button>
     <script>
-        var counter;
+        let counter;
 
         function start(velo) {
             counter = setInterval(function () {
-                fetch("http://192.168.2.169:3003/" + velo);
+                console.log(velo + "se");
+                apicall(velo);
             }, 50);
         }
         function end() {
             clearInterval(counter)
+        }
+        function apicall(velo) {
+            fetch("https://192.168.2.169:3003/" + velo, { method: "POST" });
         }
     </script>
 </body>
