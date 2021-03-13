@@ -1,8 +1,9 @@
-// run `node server.js` with NodeIPC.exe in the same directory.
+let fs = require('fs');
+let array = fs.readFileSync('../Settings.txt').toString().split("\n");
 
-var spawn = require('child_process').spawn;
+let spawn = require('child_process').spawn;
 
-var ipc = spawn("../RemoteController/bin/Release/net5.0/RemoteController.exe");
+let ipc = spawn(array[0]);
 ipc.stdin.setEncoding("utf8");
 
 ipc.stderr.on('data', function (data) {
@@ -13,16 +14,12 @@ ipc.stdout.on('data', function (data) {
     process.stdout.write(data.toString());
 });
 
-// to allow sending messages by typing into the console window.
-var stdin = process.openStdin();
+let stdin = process.openStdin();
 
 stdin.on('data', function (data) {
     ipc.stdin.write(data);
 });
 
 module.exports.write = (message) => {
-    console.log("Sending: ", JSON.stringify(message));
-
     ipc.stdin.write(message);
-
 }

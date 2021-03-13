@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html onmouseup="EndInterval()" ontouchstop="EndInterval()">
+
 <head>
     <style>
         #ola {
@@ -8,6 +9,7 @@
         }
     </style>
 </head>
+
 <body>
     <button id="ola" onmousedown="StartInterval('sub1y')" ontouchstart="StartInterval('sub1y')">Up</button>
     <button id="ola" onmousedown="StartInterval('sub1x')" ontouchstart="StartInterval('sub1x')">Left</button>
@@ -17,18 +19,16 @@
     <script>
         let counter;
 
-        function StartInterval(VeloURL)
-        {
+        function StartInterval(VeloURL) {
             counter = setInterval(() => {
-                fetch("http://192.168.2.169:3003/" + VeloURL)
+                fetch("http://localhost:3003/" + VeloURL)
             })
         }
-        function EndInterval()
-        {
+        function EndInterval() {
             clearInterval(counter);
         }
-        function ApiCall(){
-            fetch("http://192.168.2.169:3003/click");
+        function ApiCall() {
+            fetch("http://localhost:3003/click");
         }
     </script>
 </body>
