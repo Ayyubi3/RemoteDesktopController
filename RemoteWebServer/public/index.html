@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html onmouseup="end()" ontouchend="end()" onpointerup="end()" style="user-select: none;">
+<html onmouseup="EndInterval()" ontouchstop="EndInterval()">
 <head>
     <style>
         #ola {
-            background-color: aqua;
+            background-color: rgb(95, 0, 124);
             padding: 10px;
         }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-    <button id="ola" ontouchstart="start('sub1y')" onmousedown="start('sub1y');">Up</button>
-    <button id="ola" ontouchstart="start('sub1x')" onmousedown="start('sub1x');">Left</button>
-    <button id="ola" ontouchstart="apicall('click')" onmousedown="apicall('click');">OK</button>
-    <button id="ola" ontouchstart="start('add1x')" onmousedown="start('add1x');">Right</button>
-    <button id="ola" ontouchstart="start('add1y')" onmousedown="start('add1y');">Down</button>
+    <button id="ola" onmousedown="StartInterval('sub1y')" ontouchstart="StartInterval('sub1y')">Up</button>
+    <button id="ola" onmousedown="StartInterval('sub1x')" ontouchstart="StartInterval('sub1x')">Left</button>
+    <button id="ola" onmousedown="StartInterval('add1x')" ontouchstart="StartInterval('add1x')">Right</button>
+    <button id="ola" onmousedown="StartInterval('add1y')" ontouchstart="StartInterval('add1y')">Down</button>
+    <button id="ola" onmousedown="ApiCall()" ontouchstart="ApiCall()">OK</button>
     <script>
         let counter;
 
-        function start(velo) {
-            counter = setInterval(function () {
-                console.log(velo + "se");
-                apicall(velo);
-            }, 50);
+        function StartInterval(VeloURL)
+        {
+            counter = setInterval(() => {
+                fetch("http://192.168.2.169:3003/" + VeloURL)
+            })
         }
-        function end() {
-            clearInterval(counter)
+        function EndInterval()
+        {
+            clearInterval(counter);
         }
-        function apicall(velo) {
-            fetch("https://192.168.2.169:3003/" + velo, { method: "POST" });
+        function ApiCall(){
+            fetch("http://192.168.2.169:3003/click");
         }
     </script>
 </body>
