@@ -1,0 +1,16 @@
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.exe
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.deps.json
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.runtimeconfig.json
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.runtimeconfig.dev.json
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.dll
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\ref\RemotePure.dll
+C:\Users\Eyüp\source\repos\RemotePure\bin\Release\net5.0\RemotePure.pdb
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.AssemblyInfoInputs.cache
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.AssemblyInfo.cs
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.csproj.CoreCompileInputs.cache
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.dll
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\ref\RemotePure.dll
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.pdb
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.genruntimeconfig.cache
+C:\Users\Eyüp\source\repos\RemotePure\obj\Release\net5.0\RemotePure.csprojAssemblyReference.cache
