@@ -1,6 +1,6 @@
-cd RemoteController
+cd Controller
 dotnet build -c Release
 cd ..
-cd RemoteWebServer
 cls
+cd WebServer
 node index.js

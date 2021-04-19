@@ -1,1 +1,0 @@
-../RemoteController/bin/Release/net5.0/RemoteController.exe

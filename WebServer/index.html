@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html onmouseup='EndInterval()' ontouchend='EndInterval()'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <title>Document</title>
+    <style>
+        .btn {
+            background-color: rgb(95, 0, 124);
+            padding: 10px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onmousedown='startsend(`sub1y`);' ontouchstart='startsend(`sub1y`);' class='btn'>Up</button>
+    <button onmousedown='startsend(`sub1x`);' ontouchstart='startsend(`sub1x`);' class='btn'>Left</button>
+    <button onmousedown='startsend(`add1x`);' ontouchstart='startsend(`add1x`);' class='btn'>Right</button>
+    <button onmousedown='startsend(`add1y`);' ontouchstart='startsend(`add1y`);' class='btn'>Down</button>
+    <button onmousedown='socket.send(`click`);' ontouchstart='socket.send(`click`);' class='btn'>OK</button>
+
+    <script>
+        const socket = new WebSocket('ws://192.168.2.169:8080');
+        let counter;
+
+        function startsend(message) {
+            counter = setInterval(() => {
+                socket.send(message);
+            })
+        }
+
+        function EndInterval() {
+            clearInterval(counter);
+        }
+    </script>
+</body>
+
+</html>
