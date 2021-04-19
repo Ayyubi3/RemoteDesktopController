@@ -27,7 +27,7 @@
     <button onmousedown='startsend(`sub1x`);' ontouchstart='startsend(`sub1x`);' class='btn'>Left</button>
     <button onmousedown='startsend(`add1x`);' ontouchstart='startsend(`add1x`);' class='btn'>Right</button>
     <button onmousedown='startsend(`add1y`);' ontouchstart='startsend(`add1y`);' class='btn'>Down</button>
-    <button onmousedown='socket.send(`click`);' ontouchstart='socket.send(`click`);' class='btn'>OK</button>
+    <button onclick='socket.send(`click`);' class='btn'>OK</button>
 
     <script>
         const socket = new WebSocket('ws://192.168.2.169:8080');

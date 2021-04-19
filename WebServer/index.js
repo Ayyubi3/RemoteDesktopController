@@ -1,32 +1,37 @@
-let html = require('fs').readFileSync('./index.html', )
 const WebSocket = require('ws')
 const server = new WebSocket.Server({ port: '8080' })
 
+//Start the C# controller app
+let Controller;
+try {
+    Controller = require('child_process').spawn("../Controller/bin/Release/net5.0/Controller.exe")
+} catch (e) { Log(e.message) }
 
-let Controller = require('child_process').spawn("../Controller/bin/Release/net5.0/Controller.exe")
 
 Controller.stdin.setEncoding("utf8");
 
 Controller.stderr.on('data', function(data) {
-    process.stdout.write(data.toString());
+    Log(data.toString());
 });
 
 Controller.stdout.on('data', function(data) {
-    process.stdout.write(data.toString());
+    Log(data.toString());
 });
 
 server.on('connection', socket => {
 
-    console.log("Connected")
+    Log("Connected")
 
     socket.on('message', message => {
-        console.log(message + " send")
+        Log(message + " send")
 
         Controller.stdin.write(message)
 
     });
 
 });
+let html
+try { html = require('fs').readFileSync('./index.html') } catch (e) { Log(e.message) }
 
 const http = require('http');
 
@@ -35,3 +40,5 @@ http.createServer((req, res) => {
     res.write(html);
     res.end();
 }).listen(3000)
+
+const Log = message => console.log("WebServer: " + message)

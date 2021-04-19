@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QjBltHWYwu2x/aX9pijIohbH6j3aL4G3QbpPgcUnbXEABA+Cl/1lXMDHriNETvGnTOk862FBf0jgCJoxYtdPIw==",
+  "dgSpecHash": "kDT9+BBUW+DcM5QaTXSr0VIHPAyxXqkMVFYroWKK7Lr26wXcAjj2daCq8WgmOMlk8P0MW7hadeWXKb9DRtc+fA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eyüp\\source\\repos\\Remote\\Controller\\Controller.csproj",
+  "projectFilePath": "C:\\Users\\Eyüp\\source\\repos\\RemoteDesktopController\\Controller\\Controller.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

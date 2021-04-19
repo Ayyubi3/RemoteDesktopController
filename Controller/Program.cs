@@ -32,22 +32,27 @@ class Program
         {
             case "add1x":
                 MouseOperations.SetCursorPosition(p.X + SENSITIVITY, p.Y);
+                Console.WriteLine("Executed add1x");
                 break;
             case "add1y":
                 MouseOperations.SetCursorPosition(p.X, p.Y + SENSITIVITY);
+                Console.WriteLine("Executed add1y");
                 break;
             case "sub1x":
                 MouseOperations.SetCursorPosition(p.X - SENSITIVITY, p.Y);
+                Console.WriteLine("Executed sub1x");
                 break;
             case "sub1y":
                 MouseOperations.SetCursorPosition(p.X, p.Y - SENSITIVITY);
-                break;
-            default:
-                Console.WriteLine("Something failed");
+                Console.WriteLine("Executed sub1y");
                 break;
             case "click":
                 MouseOperations.MouseEvent(MouseOperations.MouseEventFlags.LeftDown);
                 MouseOperations.MouseEvent(MouseOperations.MouseEventFlags.LeftUp);
+                Console.WriteLine("Executed click");
+                break;
+            default:
+                Console.WriteLine("Something failed");
                 break;
         }
     }
